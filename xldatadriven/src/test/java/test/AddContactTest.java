@@ -1,5 +1,7 @@
 package test;
 
+import java.net.MalformedURLException;
+
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -26,9 +28,9 @@ String Zip=reader.getCellData("Sheet1", "Zip", 2);
 
 
 @Test
-public void AddingContact()throws InterruptedException{
+public void AddingContact()throws InterruptedException, MalformedURLException{
 
-	WebDriver driver = BrowserFactory.startBrowser("chrome", "http://techfios.com/test/billing/?ng=login/");	
+	WebDriver driver = BrowserFactory.startBrowser("AndroidBrowser", "http://techfios.com/test/billing/?ng=login/");	
 	
 	LoginPage logintotechfios= PageFactory.initElements(driver, LoginPage.class);
 
